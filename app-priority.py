@@ -19,13 +19,7 @@ app_list={'whatsapp':['Camera','Contact','Microphone'],
           'inshorts':['Physical','Phone','SMS'],
           'telegram':['SMS','Physical']}
 
-def hasValue(list1, value):
-    for i in list1:
-        if value==i:
-            return 0
-        else:
-            return 1
-            
+           
 def checkPermission(app_list,p_list):
         
         for i in app_list.keys():#app_list
@@ -41,18 +35,12 @@ def checkPermission(app_list,p_list):
                         else:
                             list1.append('Low')
             
-            if hasValue(list1,'High')==0:
+            if 'High' in list1:
                 print(i+" "+"High")
-            elif hasValue(list1,'Medium')==0:
+            elif 'Medium'in list1:
                 print(i+" "+"Medium")
-            elif hasValue(list1,'Low')==0:
+            elif 'Low' in list1:
                 print(i+" "+"Low")
-##            print(list1)
-            
-            
-            
-                        
-
-                    
+                  
 
 checkPermission(app_list,p_list)
